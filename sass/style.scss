@@ -1,2 +1,406 @@
 @import "compass/reset";
 @import "compass/css3";
+
+@import "compass/utilities/general/clearfix";
+
+@import "icomoon";
+@import "mapglyphs";
+
+$header-color: hsl(0, 0, 10%);
+$header-hover-color: hsl(0, 0, 20%);
+$text-color: hsl(0, 10%, 90%);
+
+
+$highlight-color: hsl(20, 100%, 50%);
+$highlight-hover-color: hsl(25, 100%, 50%);
+
+$mask-darker-color: hsl(0, 5%, 15%);
+$mask-color: hsl(0, 5%, 20%);
+$mask-hover-color: hsl(0, 5%, 30%);
+
+$twitter-color: #00ADEE;
+$skype-color: #1AA2DA;
+$github-color: #000000;
+$email-color: #00ADEF;
+$google-plus-color: #db4a39;
+
+body {
+	font-family: 'Roboto', sans-serif;
+	font-size: 62.5%;
+	text-align: center;
+	color: $text-color;
+}
+
+.topbar {
+	background: $header-color;
+
+	.link {
+		display: inline-block;
+		padding: 1.5em 2em;
+		text-decoration: none;
+		color: $text-color;
+	}
+
+	nav {
+		li {
+			float: left;
+		}
+
+		a {
+			@extend .link;
+			&:hover {
+				background-color: $header-hover-color;
+			}
+		}
+	}
+
+	.button {
+		@extend .link;
+		background-color: $highlight-color;
+		float: right;
+		margin-right: 2em;
+
+		&:hover {
+			background-color: $highlight-hover-color;
+		}
+	}
+
+	@include clearfix;
+}
+
+.hero {
+	padding: 10em 0;
+	background-color: $mask-color;
+	position: relative;
+	z-index: 1;
+
+	color: white;
+
+	h1 {
+		font-size: 4em;
+		font-weight: lighter;
+
+		text-transform: uppercase;
+		padding-top: 2em;
+		
+		&:after {
+			display: block;
+			content: "";
+			background-color: $text-color;
+			width: 20%;
+			height: 1px;
+			margin: .5em auto;
+		}
+	}
+
+	h2 {
+		font-size: 2em;
+		font-weight: lighter;
+		padding: 1em 0 2em 0;
+	}
+
+	&:after {
+		display: block;
+		position: absolute;
+		content: "";
+		background: url('../images/hero.jpg');
+		background-size: cover;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		z-index: -1;
+		opacity: .5;
+	}
+}
+
+.timeline {
+	background-color: $mask-color;
+	padding: 10em 0;
+	overflow: hidden;
+	position: relative;
+
+	&:before {
+		position: absolute;
+		display: block;
+		content: "";
+		border:1px dashed $highlight-color;
+		height: 100%;
+		margin: 0 auto;
+		z-index: 0;
+		left: 50%;
+	}
+
+	.summary {
+		margin: 2em 0;
+	}
+
+	.year {
+		width: 2em;
+		height: 2em;
+		margin: 0 auto;
+		padding: 1em;
+		@include border-radius(100%);
+		border: 1px solid $text-color;
+		position: relative;
+		background-color: $mask-color;
+
+		span {
+			position: absolute;
+			top: 1.5em;
+			left: .9em;
+		}
+	}
+	
+	@mixin circle($radius) {
+		text-align: center;
+		width: $radius;
+		height: $radius;
+		line-height: $radius;
+	}
+
+	li {
+		position: relative;
+		padding: 2em 0;
+
+		.circle {
+			position: absolute;
+			font-size: 2em;
+			background-color: $mask-hover-color;
+			@include border-radius(50%);
+
+			i {
+				color: $mask-color;
+				padding: .5em;
+				display: block;
+				@include circle(1em);		
+			}
+
+			&:hover {
+				color: $mask-color;
+				background-color: $mask-hover-color;
+			}
+		}
+		
+
+		&:nth-child(even) .event{
+			margin-right: 50%;
+			
+			.circle {
+				right: -1em;
+			}
+
+			header {
+
+				&:after {
+					display: block;
+					content: "";
+					position: absolute;
+					top: 8px;
+					right: -10px;
+					border: .5em solid transparent;
+					border-left: .5em solid $highlight-color;
+				}
+
+				&:before {
+					display: none;
+				}
+			}
+		}
+
+		&:nth-child(odd) .event{
+			.circle {
+				left: -1em;
+			}
+
+			margin-left: 50%;
+		}
+
+		.event {
+			width: 50%;
+			text-align: left;
+			position: relative;
+			// margin: 2em 0;
+
+			.inner {
+				width: 80%;
+				margin: 0 auto;
+			}
+
+			header {
+				background-color: $highlight-color;
+				color: white;
+				padding: 1em;
+				position: relative;
+
+				&:before {
+					display: block;
+					content: "";
+					position: absolute;
+					top: 8px;
+					left: -10px;
+					border: .5em solid transparent;
+					border-right: .5em solid $highlight-color;
+				}
+			}
+
+			section {
+				padding: 1em;
+				background-color: #efefef;
+				color: $mask-hover-color;
+
+				p {
+					line-height: 1.4;
+				}
+			}
+
+			footer {
+				padding: 1em;
+				background-color: #efefef;
+				color: $mask-hover-color;
+				text-transform: uppercase;
+
+				a {
+					color: $mask-hover-color;
+					text-decoration: none;
+				}
+
+				time {
+					float: right;
+				}
+			}
+		}
+	}
+	
+}
+
+.seeking {
+	padding: 20em 0;
+	background-color: $mask-color;
+	position: relative;
+	z-index: 1;
+
+	color: white;
+
+	&:after {
+		display: block;
+		position: absolute;
+		content: "";
+		background: url('../images/juntao-canon.jpg');
+		background-size: cover;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		z-index: -1;
+		opacity: .5;
+	}	
+}
+
+.social {
+	background-color: $mask-color;
+	padding: 10em 0;
+
+	h3 {
+		font-size: 2em;
+		font-weight: lighter;
+		padding: 0 0 2em 0;
+		text-transform: uppercase;
+
+		&:after {
+			display: block;
+			content: "";
+			background-color: $text-color;
+			width: 2em;
+			margin: .5em auto;
+			height: .1em;
+		}
+	}
+
+	li {
+		float: left;
+		width: 20%;
+
+		a {
+			color: white;
+			text-decoration: none;
+			display: block;
+			transition: all .2s ease-in-out;
+
+			i {
+				font-size: 3em;
+			}
+
+			&:hover {
+				transform: scale(1.2);
+			}
+			&.twitter:hover {
+				color: $twitter-color;
+			}
+			&.github:hover {
+				color: $github-color;
+			}
+			&.email:hover {
+				color: $email-color;
+			}
+			&.skype:hover {
+				color: $skype-color;
+			}
+			&.google-plus:hover {
+				color: $google-plus-color;
+			}
+		}
+
+	}
+
+	@include clearfix;
+}
+
+.contact {
+	padding: 10em 0;
+	background-color: $mask-darker-color;
+	position: relative;
+	z-index: 1;
+
+	li {
+		float: left;
+		width: 50%;
+		.information {
+			text-align: left;
+			padding: 0 4em;
+
+			h3 {
+				font-size: 2em;
+				text-transform: uppercase;
+				margin-bottom: 1em;
+			}
+
+			p {
+				line-height: 1.4;
+				margin-bottom: 1em;
+			}
+
+			tel {
+				color: white;
+				display: block;
+				margin-bottom: 1em;
+			}
+		}
+
+		.global {
+			a {
+				color: $text-color;
+				transition: all .2s ease-in-out;
+				i {
+					font-size: 20em;
+				}
+
+				&:hover {
+					color: $highlight-color;
+				}
+			}
+		}
+	}
+
+	@include clearfix;
+}
