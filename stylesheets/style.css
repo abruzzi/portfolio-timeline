@@ -1818,7 +1818,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   content: "\e633";
 }
 
-/* line 27, ../sass/style.scss */
+/* line 29, ../sass/style.scss */
 body {
   font-family: 'Roboto', sans-serif;
   font-size: 62.5%;
@@ -1826,54 +1826,55 @@ body {
   color: #e8e3e3;
 }
 
-/* line 34, ../sass/style.scss */
+/* line 36, ../sass/style.scss */
 .topbar {
   background: #1a1a1a;
   overflow: hidden;
   *zoom: 1;
 }
-/* line 37, ../sass/style.scss */
+/* line 39, ../sass/style.scss */
 .topbar .link, .topbar nav a, .topbar .button {
   display: inline-block;
   padding: 1.5em 2em;
   text-decoration: none;
   color: #e8e3e3;
 }
-/* line 45, ../sass/style.scss */
+/* line 47, ../sass/style.scss */
 .topbar nav li {
   float: left;
 }
-/* line 51, ../sass/style.scss */
+/* line 53, ../sass/style.scss */
 .topbar nav a:hover {
   background-color: #333333;
 }
-/* line 57, ../sass/style.scss */
+/* line 59, ../sass/style.scss */
 .topbar .button {
-  background-color: #ff5500;
+  background-color: #00aaff;
   float: right;
+  white-space: nowrap;
   margin-right: 2em;
 }
-/* line 63, ../sass/style.scss */
+/* line 66, ../sass/style.scss */
 .topbar .button:hover {
-  background-color: #ff6a00;
+  background-color: #007fff;
 }
 
-/* line 71, ../sass/style.scss */
+/* line 74, ../sass/style.scss */
 .hero {
-  padding: 10em 0;
+  padding: 20em 0;
   background-color: #363030;
   position: relative;
   z-index: 1;
   color: white;
 }
-/* line 79, ../sass/style.scss */
+/* line 82, ../sass/style.scss */
 .hero h1 {
   font-size: 4em;
   font-weight: lighter;
   text-transform: uppercase;
   padding-top: 2em;
 }
-/* line 86, ../sass/style.scss */
+/* line 89, ../sass/style.scss */
 .hero h1:after {
   display: block;
   content: "";
@@ -1882,13 +1883,13 @@ body {
   height: 1px;
   margin: .5em auto;
 }
-/* line 96, ../sass/style.scss */
+/* line 99, ../sass/style.scss */
 .hero h2 {
   font-size: 2em;
   font-weight: lighter;
   padding: 1em 0 2em 0;
 }
-/* line 102, ../sass/style.scss */
+/* line 105, ../sass/style.scss */
 .hero:after {
   display: block;
   position: absolute;
@@ -1903,29 +1904,29 @@ body {
   opacity: .5;
 }
 
-/* line 117, ../sass/style.scss */
+/* line 120, ../sass/style.scss */
 .timeline {
   background-color: #363030;
   padding: 10em 0;
   overflow: hidden;
   position: relative;
 }
-/* line 123, ../sass/style.scss */
+/* line 126, ../sass/style.scss */
 .timeline:before {
   position: absolute;
   display: block;
   content: "";
-  border: 1px dashed #ff5500;
+  border: 1px dashed #00aaff;
   height: 100%;
   margin: 0 auto;
   z-index: 0;
   left: 50%;
 }
-/* line 134, ../sass/style.scss */
+/* line 137, ../sass/style.scss */
 .timeline .summary {
   margin: 2em 0;
 }
-/* line 138, ../sass/style.scss */
+/* line 141, ../sass/style.scss */
 .timeline .year {
   width: 2em;
   height: 2em;
@@ -1938,18 +1939,18 @@ body {
   position: relative;
   background-color: #363030;
 }
-/* line 148, ../sass/style.scss */
+/* line 151, ../sass/style.scss */
 .timeline .year span {
   position: absolute;
   top: 1.5em;
   left: .9em;
 }
-/* line 162, ../sass/style.scss */
+/* line 165, ../sass/style.scss */
 .timeline li {
   position: relative;
   padding: 2em 0;
 }
-/* line 166, ../sass/style.scss */
+/* line 169, ../sass/style.scss */
 .timeline li .circle {
   position: absolute;
   font-size: 2em;
@@ -1958,7 +1959,7 @@ body {
   -webkit-border-radius: 50%;
   border-radius: 50%;
 }
-/* line 172, ../sass/style.scss */
+/* line 175, ../sass/style.scss */
 .timeline li .circle i {
   color: #363030;
   padding: .5em;
@@ -1968,20 +1969,24 @@ body {
   height: 1em;
   line-height: 1em;
 }
-/* line 179, ../sass/style.scss */
+/* line 182, ../sass/style.scss */
 .timeline li .circle:hover {
   color: #363030;
   background-color: #504949;
 }
-/* line 186, ../sass/style.scss */
+/* line 189, ../sass/style.scss */
 .timeline li:nth-child(even) .event {
   margin-right: 50%;
 }
-/* line 189, ../sass/style.scss */
+/* line 192, ../sass/style.scss */
 .timeline li:nth-child(even) .event .circle {
   right: -1em;
 }
-/* line 195, ../sass/style.scss */
+/* line 196, ../sass/style.scss */
+.timeline li:nth-child(even) .event header {
+  background-color: #ff5500;
+}
+/* line 198, ../sass/style.scss */
 .timeline li:nth-child(even) .event header:after {
   display: block;
   content: "";
@@ -1991,37 +1996,37 @@ body {
   border: .5em solid transparent;
   border-left: 0.5em solid #ff5500;
 }
-/* line 205, ../sass/style.scss */
+/* line 208, ../sass/style.scss */
 .timeline li:nth-child(even) .event header:before {
   display: none;
 }
-/* line 211, ../sass/style.scss */
+/* line 214, ../sass/style.scss */
 .timeline li:nth-child(odd) .event {
   margin-left: 50%;
 }
-/* line 212, ../sass/style.scss */
+/* line 215, ../sass/style.scss */
 .timeline li:nth-child(odd) .event .circle {
   left: -1em;
 }
-/* line 219, ../sass/style.scss */
+/* line 222, ../sass/style.scss */
 .timeline li .event {
   width: 50%;
   text-align: left;
   position: relative;
 }
-/* line 225, ../sass/style.scss */
+/* line 228, ../sass/style.scss */
 .timeline li .event .inner {
   width: 80%;
   margin: 0 auto;
 }
-/* line 230, ../sass/style.scss */
+/* line 233, ../sass/style.scss */
 .timeline li .event header {
-  background-color: #ff5500;
+  background-color: #00aaff;
   color: white;
   padding: 1em;
   position: relative;
 }
-/* line 236, ../sass/style.scss */
+/* line 239, ../sass/style.scss */
 .timeline li .event header:before {
   display: block;
   content: "";
@@ -2029,49 +2034,55 @@ body {
   top: 8px;
   left: -10px;
   border: .5em solid transparent;
-  border-right: 0.5em solid #ff5500;
+  border-right: 0.5em solid #00aaff;
 }
-/* line 247, ../sass/style.scss */
+/* line 250, ../sass/style.scss */
 .timeline li .event section {
   padding: 1em;
   background-color: #efefef;
   color: #504949;
 }
-/* line 252, ../sass/style.scss */
+/* line 255, ../sass/style.scss */
 .timeline li .event section p {
   line-height: 1.4;
 }
-/* line 257, ../sass/style.scss */
+/* line 260, ../sass/style.scss */
 .timeline li .event footer {
   padding: 1em;
   background-color: #efefef;
   color: #504949;
   text-transform: uppercase;
 }
-/* line 263, ../sass/style.scss */
+/* line 266, ../sass/style.scss */
 .timeline li .event footer a {
   color: #504949;
   text-decoration: none;
 }
-/* line 268, ../sass/style.scss */
+/* line 271, ../sass/style.scss */
 .timeline li .event footer time {
   float: right;
+  white-space: nowrap;
 }
 
-/* line 277, ../sass/style.scss */
+/* line 281, ../sass/style.scss */
+.about {
+  background-color: #363030;
+}
+
+/* line 286, ../sass/style.scss */
 .seeking {
-  padding: 20em 0;
+  padding: 34em 0;
   background-color: #363030;
   position: relative;
   z-index: 1;
   color: white;
 }
-/* line 285, ../sass/style.scss */
+/* line 294, ../sass/style.scss */
 .seeking:after {
   display: block;
   position: absolute;
   content: "";
-  background: url("../images/juntao-canon.jpg");
+  background: url("../images/juntao.jpg");
   background-size: cover;
   width: 100%;
   height: 100%;
@@ -2081,21 +2092,21 @@ body {
   opacity: .5;
 }
 
-/* line 300, ../sass/style.scss */
+/* line 309, ../sass/style.scss */
 .social {
   background-color: #363030;
   padding: 10em 0;
   overflow: hidden;
   *zoom: 1;
 }
-/* line 304, ../sass/style.scss */
+/* line 313, ../sass/style.scss */
 .social h3 {
   font-size: 2em;
   font-weight: lighter;
   padding: 0 0 2em 0;
   text-transform: uppercase;
 }
-/* line 310, ../sass/style.scss */
+/* line 319, ../sass/style.scss */
 .social h3:after {
   display: block;
   content: "";
@@ -2104,48 +2115,48 @@ body {
   margin: .5em auto;
   height: .1em;
 }
-/* line 320, ../sass/style.scss */
+/* line 329, ../sass/style.scss */
 .social li {
   float: left;
   width: 20%;
 }
-/* line 324, ../sass/style.scss */
+/* line 333, ../sass/style.scss */
 .social li a {
   color: white;
   text-decoration: none;
   display: block;
   transition: all .2s ease-in-out;
 }
-/* line 330, ../sass/style.scss */
+/* line 339, ../sass/style.scss */
 .social li a i {
   font-size: 3em;
 }
-/* line 334, ../sass/style.scss */
+/* line 343, ../sass/style.scss */
 .social li a:hover {
   transform: scale(1.2);
 }
-/* line 337, ../sass/style.scss */
+/* line 346, ../sass/style.scss */
 .social li a.twitter:hover {
   color: #00ADEE;
 }
-/* line 340, ../sass/style.scss */
+/* line 349, ../sass/style.scss */
 .social li a.github:hover {
   color: #000000;
 }
-/* line 343, ../sass/style.scss */
+/* line 352, ../sass/style.scss */
 .social li a.email:hover {
   color: #00ADEF;
 }
-/* line 346, ../sass/style.scss */
+/* line 355, ../sass/style.scss */
 .social li a.skype:hover {
   color: #1AA2DA;
 }
-/* line 349, ../sass/style.scss */
+/* line 358, ../sass/style.scss */
 .social li a.google-plus:hover {
   color: #db4a39;
 }
 
-/* line 359, ../sass/style.scss */
+/* line 368, ../sass/style.scss */
 .contact {
   padding: 10em 0;
   background-color: #282424;
@@ -2154,43 +2165,63 @@ body {
   overflow: hidden;
   *zoom: 1;
 }
-/* line 365, ../sass/style.scss */
+/* line 374, ../sass/style.scss */
 .contact li {
   float: left;
   width: 50%;
 }
-/* line 368, ../sass/style.scss */
+/* line 377, ../sass/style.scss */
 .contact li .information {
   text-align: left;
   padding: 0 4em;
 }
-/* line 372, ../sass/style.scss */
+/* line 381, ../sass/style.scss */
 .contact li .information h3 {
   font-size: 2em;
   text-transform: uppercase;
   margin-bottom: 1em;
 }
-/* line 378, ../sass/style.scss */
+/* line 387, ../sass/style.scss */
 .contact li .information p {
   line-height: 1.4;
   margin-bottom: 1em;
 }
-/* line 383, ../sass/style.scss */
+/* line 392, ../sass/style.scss */
 .contact li .information tel {
   color: white;
   display: block;
   margin-bottom: 1em;
 }
-/* line 391, ../sass/style.scss */
+/* line 399, ../sass/style.scss */
+.contact li .global {
+  position: relative;
+}
+/* line 401, ../sass/style.scss */
+.contact li .global .my-location {
+  position: absolute;
+  top: 10em;
+  left: 28.6em;
+  background-color: #ff5500;
+  width: .3em;
+  height: .3em;
+  -moz-border-radius: 100%;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+}
+/* line 410, ../sass/style.scss */
+.contact li .global .my-location:hover {
+  transform: scale(3);
+}
+/* line 414, ../sass/style.scss */
 .contact li .global a {
   color: #e8e3e3;
   transition: all .2s ease-in-out;
 }
-/* line 394, ../sass/style.scss */
+/* line 417, ../sass/style.scss */
 .contact li .global a i {
   font-size: 20em;
 }
-/* line 398, ../sass/style.scss */
+/* line 421, ../sass/style.scss */
 .contact li .global a:hover {
-  color: #ff5500;
+  color: #00aaff;
 }
