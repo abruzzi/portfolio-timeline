@@ -14,16 +14,16 @@ $highlight-color: hsl(200, 100%, 50%);
 $highlight-hover-color: hsl(210, 100%, 50%);
 
 $highlight-alter-color: hsl(20, 100%, 50%);
-$highlight-alter-hover-color: hsl(30, 100%, 50%);
+$highlight-alter-hover-color: hsl(25, 100%, 50%);
 
-$mask-darker-color: hsl(0, 5%, 15%);
+$mask-darker-color: hsl(0, 5%, 10%);
 $mask-color: hsl(0, 5%, 20%);
 $mask-hover-color: hsl(0, 5%, 30%);
 
 $twitter-color: #00ADEE;
-$skype-color: #1AA2DA;
+$skype-color: #1DAEF0;
 $github-color: #000000;
-$email-color: #00ADEF;
+$email-color: #147DDA;
 $google-plus-color: #db4a39;
 
 body {
@@ -38,9 +38,10 @@ body {
 
 	.link {
 		display: inline-block;
-		padding: 1.5em 2em;
+		padding: 1.2em 2em;
 		text-decoration: none;
 		color: $text-color;
+		font-size: 1.5em;
 	}
 
 	nav {
@@ -115,6 +116,21 @@ body {
 		z-index: -1;
 		opacity: .5;
 	}
+
+	.down {
+		display: block;
+		font-size: 2em;
+		text-decoration: none;
+		color: white;
+		@include border-radius(100%);
+		border: 1px solid white;
+		width: 1em;
+		height: 1em;
+		line-height: 1em;
+		padding: .5em;
+		margin: 1em auto 0 auto;
+
+	}
 }
 
 .timeline {
@@ -143,6 +159,7 @@ body {
 		height: 2em;
 		margin: 0 auto;
 		padding: 1em;
+		font-size: 1.2em;
 		@include border-radius(100%);
 		border: 1px solid $text-color;
 		position: relative;
@@ -212,6 +229,12 @@ body {
 					display: none;
 				}
 			}
+
+			footer {
+				a:hover {
+					color: $highlight-alter-color;
+				}
+			}
 		}
 
 		&:nth-child(odd) .event{
@@ -226,11 +249,12 @@ body {
 			width: 50%;
 			text-align: left;
 			position: relative;
-			// margin: 2em 0;
+			font-size: 1.2em;
 
 			.inner {
 				width: 80%;
 				margin: 0 auto;
+				box-shadow: 1px 1px 2px $mask-darker-color;
 			}
 
 			header {
@@ -269,9 +293,14 @@ body {
 				a {
 					color: $mask-hover-color;
 					text-decoration: none;
+
+					&:hover {
+						color: $highlight-color;
+					}
 				}
 
 				time {
+					color: $mask-hover-color;
 					float: right;
 					white-space: nowrap;
 				}
@@ -389,14 +418,14 @@ body {
 
 			p {
 				line-height: 1.4;
+				font-size:1.2em;
 				margin-bottom: 1em;
 			}
 
-			tel {
-				color: white;
-				display: block;
-				margin-bottom: 1em;
+			a {
+				color: $highlight-color;
 			}
+
 		}
 
 		.global {
